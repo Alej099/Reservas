@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinta, Páginas y Encuentros</title>
+
+    <!-- Cargar tu CSS personalizado -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}">
+
+    <!-- Cargar Bootstrap desde CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="interior">
+          <a href='{% url "index" %}' class="logo"><img src='{% static "img/logo.png" %}' alt="Logo"></a>
+          <nav class="navegacion">
+            <ul>
+              <li><a href='{% url "index" %}'>Inicio</a></li>
+          
+
+              <!-- Menú de Géneros Literarios -->
+              <li class="submenu">
+                <a href="#">Géneros Literarios</a>
+                <ul class="hijos">
+                  <!-- Género Narrativo -->
+                  <li class="submenu">
+                    <a href="#">Género Narrativo</a>
+                    <ul class="hijos">
+                      <li><a href="#">Novelas</a></li>
+                      <li><a href="#">Cuentos</a></li>
+                      <li><a href="#">Fábulas</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- Género Lírica -->
+                  <li class="submenu">
+                    <a href="#">Género Lírica</a>
+                    <ul class="hijos">
+                      <li><a href="#">Poesía</a></li>
+                    </ul>
+                  </li>
+                  
+                  <!-- Género Dramático -->
+                  <li class="submenu">
+                    <a href="#">Género Dramático</a>
+                    <ul class="hijos">
+                      <li><a href="#">Tragedia</a></li>
+                      <li><a href="#">Comedia</a></li>
+                      <li><a href="#">Drama</a></li>
+                      <li><a href="#">Melodrama</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Género Épico -->
+                  <li class="submenu">
+                    <a href="#">Género Épico</a>
+                    <ul class="hijos">
+                      <li><a href="#">Romance</a></li>
+                    </ul>
+                  </li>
+
+                  <!-- Género por Temática -->
+                  <li class="submenu">
+                    <a href="#">Género por Temática</a>
+                    <ul class="hijos">
+                      <li><a href="#">Fantasía</a></li>
+                      <li><a href="#">Ciencia Ficción</a></li>
+                      <li><a href="#">Terror</a></li>
+                      <li><a href="#">Policial</a></li>
+                      <li><a href="#">Distopía</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              
+            </ul>
+          </nav>
+        </div>
+      </header>
+</body>
+</html>
